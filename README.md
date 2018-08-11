@@ -1,10 +1,17 @@
-# My GitHub Pages
+# Theme of My GitHub Pages
 
 [![Badge: CC BY-NC-SA 4.0]](/licenses/by-nc-sa-4.0.txt)
 [![Badge: GNU AGPLv3]](/licenses/agpl-3.0.txt)
 
 [Badge: CC BY-NC-SA 4.0]: https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-orange.svg
 [Badge: GNU AGPLv3]: https://img.shields.io/badge/License-GNU%20AGPL--3.0-darkmagenta.svg
+
+## Credits
+
+The original theme created by [Steve Smith] and maintained by [GitHub Pages Themes].
+
+[Steve Smith]: https://github.com/orderedlist/modernist
+[GitHub Pages Themes]: https://github.com/pages-themes/modernist
 
 ## License
 
