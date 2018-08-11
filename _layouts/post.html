@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<small>
+  &sect;
+  {{ page.date | date: "%A, %B %-e, %Y" }}
+</small>
+<br />
+<h1>{{ page.title }}</h1>
+<p class="view">
+  &rArr;
+  <i>Written by</i>
+  <a href="{{ site.author.url }}">
+    <em>{{site.author.name }}</em>
+  </a>
+</p>
+<br />
+{{ page.content }}
+<hr />
+{% if page.categories.size > 0 %}
+  Categories:
+    {% for name in page.categories %}
+      <a href="/categories#{{ name }}">
+        &nbsp;{{ name }}
+      </a>
+    {% endfor %}
+{% endif %}
+<br />
+{% if page.tags.size > 0 %}
+  <small>
+  Tags:
+    {% for name in page.tags %}
+      <a href="/tags#{{ name }}">
+        &nbsp;{{ name }}
+      </a>
+    {% endfor %}
+  </small>
+{% endif %}
