@@ -8,6 +8,8 @@ permalink: /about
 
 I'm a Chinese male, who was born in the 1970s.
 
+I'm 4 feet 7 inches tall and I weigh 324 pounds.
+
 I have not been graduated from primary school since the mathematics is too difficult to me.
 
 I can not write very well.
@@ -33,20 +35,27 @@ I'm good at work as a night shift doorman.
 
 If you want to contact me, send email to [ME][My Email].
 
+(For Chinese, 可以直接给我发送[消息]）
+
 Please, don't use words that are too complicated.
 
-And I wouldn't write back if the email wasn't from a young lady.
+And I wouldn't write back if the email wasn't from a single young lady.
+
+[My Email]: mailto:Boyu%20Yang%20%3Cyangby%40cryptape.com%3E?subject=Hello%2C%20Boyu%20Yang!&body=%0A%0A%20%20%20%20--%20From%20Boyu%20Yang%27s%20GitHub%20Pages "Send an email to ME"
+[消息]: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WyI6NTw5Ihs4KSIrLzorPnU4NDY "QQ 邮箱 -- 邮我"
 
 ## Credits
 
 - Site generation by [Jekyll].
 - Hosted on [GitHub Pages].
 - The original theme created by [Steve Smith] and [GitHub Pages Themes].
+- The cover photo, a male kodiak bear face, was took by [LadyofHats].
 
 [Jekyll]: https://jekyllrb.com/ "Transform your plain text into static websites and blogs"
 [GitHub Pages]: https://pages.github.com "Websites for you and your projects"
 [Steve Smith]: https://github.com/orderedlist/modernist
 [GitHub Pages Themes]: https://github.com/pages-themes/modernist
+[LadyofHats]: https://commons.wikimedia.org/wiki/File:Male_kodiak_bear_face.JPG
 
 ## License
 
@@ -54,6 +63,5 @@ Except as otherwise noted,
 the content of this site is licensed under the [CC BY-NC-SA 4.0],
 and the code snippets are licensed under the [GNU AGPLv3].
 
-[My Email]: mailto:Boyu%20Yang%20%3Cyangby%40cryptape.com%3E?subject=Hello%2C%20Boyu%20Yang!&body=%0A%0A%20%20%20%20--%20From%20Boyu%20Yang%27s%20GitHub%20Pages  "Send email to ME"
 [CC BY-NC-SA 4.0]: https://creativecommons.org/licenses/by-nc-sa/4.0/ "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License"
 [GNU AGPLv3]: https://www.gnu.org/licenses/agpl-3.0.html "GNU Affero General Public License Version 3"
