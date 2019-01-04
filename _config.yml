@@ -5,3 +5,10 @@ author:
   name: Boyu Yang
   url: /about#contact
 google_analytics:
+mathjax:
+  url:
+    js: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+asciinema_player:
+  url:
+    css: https://cdn.jsdelivr.net/npm/asciinema-player@2.6.1/resources/public/css/asciinema-player.min.css
+    js: https://cdn.jsdelivr.net/npm/asciinema-player@2.6.1/resources/public/js/asciinema-player.min.js
