@@ -14,7 +14,7 @@ I have not been graduated from primary school since the mathematics is too diffi
 
 I can not write very well.
 
-I'm divorced five years ago.
+I'm divorced seven years ago.
 
 I once had two kids, but my ex-wife took both of them away, since I can't afford alimony.
 
@@ -35,14 +35,11 @@ I'm good at work as a night shift doorman.
 
 If you want to contact me, send email to [ME][My Email].
 
-(For Chinese, 可以直接给我发送[消息]）
-
 Please, don't use words that are too complicated.
 
 And I wouldn't write back if the email wasn't from a single young lady.
 
 [My Email]: mailto:Boyu%20Yang%20%3Cyangby%40cryptape.com%3E?subject=Hello%2C%20Boyu%20Yang!&body=%0A%0A%20%20%20%20--%20From%20Boyu%20Yang%27s%20GitHub%20Pages "Send an email to ME"
-[消息]: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=WyI6NTw5Ihs4KSIrLzorPnU4NDY "QQ 邮箱 -- 邮我"
 
 ## Credits
 
