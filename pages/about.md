@@ -6,21 +6,23 @@ permalink: /about
 
 ## About Me
 
-I'm a Chinese male, who was born in the 1970s.
-
+I'm a Chinese male who was born in the 1970s.
 I'm 4 feet 7 inches tall and I weigh 324 pounds.
 
-I have not been graduated from primary school since the mathematics is too difficult to me.
+At the end of the last century, I studied at a secondary vocational school in Xiamen, China.
+I majored in tourism management, but I didn't graduate since the mathematics is too difficult for me.
+Also, both Chinese and English are hard for me too, and I can't write or read well.
 
-I can not write very well.
+At the beginning of this century, I was married to a woman.
+This marriage lasted for 13 years, then we divorced.
+I once had two kids, but my ex-wife took them away, since I can't afford alimony.
 
-I'm divorced seven years ago.
-
-I once had two kids, but my ex-wife took both of them away, since I can't afford alimony.
+Now, I'm living with my parents.
+So I hope my next spouse has her own house in the downtown areas.
 
 ## Profile
 
-I'm working as a night shift doorman for [Cryptape Co., Ltd], since April, 2017, in [Hangzhou, China].
+I'm working as a night shift doorman for [Cryptape Co., Ltd], since April 2017, in Hangzhou, China.
 
 I have been engaged as a night shift doorman for more than twenty years.
 
@@ -29,17 +31,16 @@ I'm good at work as a night shift doorman.
 **I am honest, and I never lie.**
 
 [Cryptape Co., Ltd]: https://www.cryptape.com/ "We Build Trust."
-[Hangzhou, China]: https://www.google.com/maps/place/Block+A,+Huaxing+Times,+WenSanLu+DianZi+XinXi+JieQu,+Xihu+Qu,+Hangzhou+Shi,+Zhejiang+Sheng,+China,+310000 "Huaxing Times Square Block A"
 
 ## Contact
 
-If you want to contact me, send email to [ME][My Email].
+If you want to contact me, [email me][Email ME].
 
 Please, don't use words that are too complicated.
 
 And I wouldn't write back if the email wasn't from a single young lady.
 
-[My Email]: mailto:Boyu%20Yang%20%3Cyangby%40cryptape.com%3E?subject=Hello%2C%20Boyu%20Yang!&body=%0A%0A%20%20%20%20--%20From%20Boyu%20Yang%27s%20GitHub%20Pages "Send an email to ME"
+[Email ME]: mailto:Boyu%20Yang%20%3Cyangby%40cryptape.com%3E?subject=Hello%2C%20Boyu%20Yang!&body=%0A%0A%20%20%20%20--%20From%20Boyu%20Yang%27s%20GitHub%20Pages "Email ME"
 
 ## Credits
 
