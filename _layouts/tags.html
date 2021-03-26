@@ -7,16 +7,23 @@ layout: page
     {% assign name = item[0] %}
     {% if name != 'hide' %}
       {% assign posts = item[1] %}
-      <h2>{{ name }}</h2>
-      <ul>
-        {% for post in posts %}
-          <li>
-            <span>{{ post.date | date: '%a, %b %-e, %Y' }}</span>
-            &raquo;
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+      {% assign posts_total = posts | size %}
+      {% assign posts_hidden = posts | where_exp: 'post', 'post.tags contains "hide"' | size %}
+      {% if posts_total > posts_hidden %}
+        <h2>{{ name }}</h2>
+        <ul>
+          {% for post in posts %}
+            {% if post.tags contains "hide" %}
+            {% else %}
+              <li>
+                <span>{{ post.date | date: '%a, %b %-e, %Y' }}</span>
+                &raquo;
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endif %}
     {% endif %}
   {% endfor %}
 </ul>
