@@ -2,7 +2,7 @@
 layout: post
 title: "For Me, The Past Year is Really Terrible"
 categories: [feelings]
-tags: [terrible, negative]
+tags: [hide, terrible, negative]
 ---
 
 In the past few months, thinking about how would people think about my thoughts makes me be stressed.
