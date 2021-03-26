@@ -5,16 +5,18 @@ layout: page
 <ul>
   {% for item in site.tags %}
     {% assign name = item[0] %}
-    {% assign posts = item[1] %}
-    <h2>{{ name }}</h2>
-    <ul>
-      {% for post in posts %}
-        <li>
-          <span>{{ post.date | date: '%a, %b %-e, %Y' }}</span>
-          &raquo;
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+    {% if name != 'hide' %}
+      {% assign posts = item[1] %}
+      <h2>{{ name }}</h2>
+      <ul>
+        {% for post in posts %}
+          <li>
+            <span>{{ post.date | date: '%a, %b %-e, %Y' }}</span>
+            &raquo;
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   {% endfor %}
 </ul>
