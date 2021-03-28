@@ -50,7 +50,7 @@
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     {% if site.mathjax.url.js %}
-      <script src="{{ site.mathjax.url.js }}" type="text/javascript"></script>
+      <script type="text/javascript" id="MathJax-script" async src="{{ site.mathjax.url.js }}"></script>
     {% endif %}
     {% if site.asciinema_player.url.js %}
       <script src="{{ site.asciinema_player.url.js }}" type="text/javascript"></script>
