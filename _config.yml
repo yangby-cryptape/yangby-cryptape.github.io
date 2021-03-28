@@ -1,13 +1,13 @@
 remote_theme: yangby-cryptape/yangby-cryptape.github.io@theme
-title: Can be killed, can't be contained.
-description: The fire inside me illuminates the darkness.
+title: To Be Awake Is To Be Alive
+description: 看庭前花开花落，望天上云卷云舒
 author:
   name: Boyu Yang
   url: /about#contact
 google_analytics:
 mathjax:
   url:
-    js: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    js: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js
 asciinema_player:
   url:
     css: https://cdn.jsdelivr.net/npm/asciinema-player@2.6.1/resources/public/css/asciinema-player.min.css
