@@ -7,7 +7,7 @@ permalink: /about
 ## About Me
 
 I'm a Chinese male who was born in the 1970s.
-I'm 4 feet 7 inches tall and I weigh 324 pounds.
+I'm 4 feet 7 inches tall, and I weigh 324 pounds.
 
 At the end of the last century, I studied at a secondary vocational school in Xiamen, China.
 I majored in tourism management, but I didn't graduate since the mathematics is too difficult for me.
@@ -18,13 +18,13 @@ This marriage lasted for 13 years, then we divorced.
 I once had two kids, but my ex-wife took them away, since I can't afford alimony.
 
 Now, I'm living with my parents.
-So I hope my next spouse has her own house in the downtown areas.
+So, I hope my next spouse has her own house in the downtown areas.
 
 ## Profile
 
 I'm working as a night shift doorman for [Cryptape Co., Ltd], since April 2017, in Hangzhou, China.
 
-I have been engaged as a night shift doorman for more than twenty years.
+I have been engaged as a night shift doorman since 1997.
 
 I'm good at work as a night shift doorman.
 
@@ -36,7 +36,7 @@ I'm good at work as a night shift doorman.
 
 If you want to contact me, [email me][Email ME].
 
-Please, don't use words that are too complicated.
+Please don't use words that are too complicated.
 
 And I wouldn't write back if the email wasn't from a single young lady.
 
