@@ -7,9 +7,56 @@ author:
   url: /about#contact
 google_analytics:
 mathjax:
-  url:
-    js: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js
 asciinema_player:
   url:
-    css: https://cdn.jsdelivr.net/npm/asciinema-player@2.6.1/resources/public/css/asciinema-player.min.css
-    js: https://cdn.jsdelivr.net/npm/asciinema-player@2.6.1/resources/public/js/asciinema-player.min.js
+    css: https://cdn.jsdelivr.net/npm/asciinema-player@2/resources/public/css/asciinema-player.min.css
+    js: https://cdn.jsdelivr.net/npm/asciinema-player@2/resources/public/js/asciinema-player.min.js
+plugins:
+  - jekyll-spaceship
+jekyll-spaceship:
+  processors:
+    - table-processor
+    - mathjax-processor
+    - plantuml-processor
+    - mermaid-processor
+    - emoji-processor
+  mathjax-processor:
+    src:
+      - https://polyfill.io/v3/polyfill.min.js?features=es6
+      - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js
+    config:
+      tex:
+        inlineMath:
+          - ['$','$']
+          - ['\(','\)']
+        displayMath:
+          - ['$$','$$']
+          - ['\[','\]']
+      svg:
+        fontCache: 'global'
+    optimize: # optimization on building stage to check and add mathjax scripts
+      enabled: true # false: adding to all pages
+      include: []   # include patterns for math expressions checking (regexp)
+      exclude: []   # exclude patterns for math expressions checking (regexp)
+  plantuml-processor:
+    mode: default # pre-fetch
+    css:
+      class: plantuml
+    syntax:
+      code: 'plantuml'
+      custom: ['@startuml', '@enduml']
+    src: http://www.plantuml.com/plantuml/svg/
+  mermaid-processor:
+    mode: pre-fetch # TODO Too large in default mode; ref: jeffreytse/jekyll-spaceship#87.
+    css:
+      class: mermaid
+    syntax:
+      code: 'mermaid'
+      custom: ['@startmermaid', '@endmermaid']
+    config:
+      theme: default
+    src: https://mermaid.ink/svg/
+  emoji-processor:
+    css:
+      class: emoji
+    src: https://github.githubassets.com/images/icons/emoji/
