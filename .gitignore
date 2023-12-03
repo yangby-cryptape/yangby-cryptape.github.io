@@ -1,4 +1,5 @@
 # Ruby Gem
+Gemfile.lock
 .bundle/
 .vendor/
 # Jekyll
