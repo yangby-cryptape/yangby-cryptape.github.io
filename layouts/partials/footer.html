@@ -1,0 +1,10 @@
+{{ if .Site.Params.DebugMode }}
+{{  "<!-- ^^^ partial:body>footer ^^^ -->" | safeHTML -}}
+{{ end }}
+<footer>
+  {{ partial "footer-license"   . }}
+  {{ partial "footer-copyright" . }}
+</footer>
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- partial:body>footer --- -->" | safeHTML -}}
+{{ end }}

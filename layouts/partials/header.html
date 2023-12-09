@@ -1,0 +1,14 @@
+{{ if .Site.Params.DebugMode }}
+{{  "<!-- ^^^ partial:body>header ^^^ -->" | safeHTML -}}
+{{ end }}
+{{- $items := .Site.Params.Header.Menu }}
+<header>
+  <ul id="menu">
+    {{ range $item := $items -}}
+      <li><a href="{{ $item.href | relURL }}">{{ transform.Emojify $item.tip }}<strong>{{ $item.name }}</strong></a></li>
+    {{ end }}
+  </ul>
+</header>
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- partial:body>header --- -->" | safeHTML -}}
+{{ end }}

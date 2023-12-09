@@ -1,0 +1,12 @@
+{{ if .Site.Params.DebugMode }}
+{{  "<!-- ^^^ partial:body>footer#license ^^^ -->" | safeHTML -}}
+{{ end }}
+{{- $cr := .Site.Params.License }}
+<a id="license" href="{{ $cr.Href | relURL }}">
+  {{ range $b := $cr.Badges -}}
+    <img alt="{{ $b.name }}" src="{{ $b.src }}" />
+  {{ end }}
+</a>
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- partial:body>footer#license --- -->" | safeHTML -}}
+{{ end }}

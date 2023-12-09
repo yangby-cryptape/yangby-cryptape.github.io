@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- ^^^ default:homepage:main ^^^ -->" | safeHTML -}}
+{{ end }}
+  <main id="main-homepage">
+    {{ with .Content -}}
+      {{ . }}
+    {{- end }}
+  </main>
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- default:homepage:main --- -->" | safeHTML -}}
+{{ end }}
+{{ end }}

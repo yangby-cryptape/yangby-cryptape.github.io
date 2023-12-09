@@ -1,7 +1,9 @@
-# My Static Site
+# Hugo Theme for My Static Sites
 
 [![CC BY-NC-SA 4.0][CC BY-NC-SA 4.0 Badge]][CC BY-NC-SA 4.0 License]
 [![GNU AGPLv3][GNU AGPLv3 Badge]][GNU AGPLv3 License]
+
+A [Hugo] theme for my static sites.
 
 ## License
 
@@ -15,3 +17,5 @@ and the license for the code of this site is [GNU AGPLv3].
 [GNU AGPLv3 Badge]: https://img.shields.io/badge/License-GNU%20AGPL--3.0-darkmagenta.svg
 [GNU AGPLv3 License]: licenses/agpl-3.0.txt
 [GNU AGPLv3]: https://www.gnu.org/licenses/agpl-3.0.html "GNU Affero General Public License Version 3"
+
+[Hugo]: https://gohugo.io/

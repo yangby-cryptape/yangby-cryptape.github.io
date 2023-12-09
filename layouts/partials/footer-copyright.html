@@ -1,0 +1,12 @@
+{{ if .Site.Params.DebugMode }}
+{{  "<!-- ^^^ partial: body>footer#copyright ^^^ -->" | safeHTML -}}
+{{ end }}
+{{- $cr := .Site.Params.Copyright }}
+<p id="copyright">
+  &copy; {{ $cr.Since }}-{{ time.Now.Year }} <a href="{{ $cr.Href.Contact | relURL }}">{{ $cr.Name }}</a>.
+  All rights reserved.
+  &mdash; <a href="{{ $cr.Href.Credits | relURL }}">Credits</a>
+</p>
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- partial:body>footer#copyright --- -->" | safeHTML -}}
+{{ end }}

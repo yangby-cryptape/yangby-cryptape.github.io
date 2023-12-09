@@ -1,0 +1,18 @@
+{{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- ^^^ default:single:main ^^^ -->" | safeHTML -}}
+{{ end }}
+  <main id="main-single">
+    <h1 id="title">{{ .Title }}</h1><hr />
+    <article id="content">
+      {{ with .Content -}}
+        {{ . }}
+      {{- end }}
+    </article>
+  </main>
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- default:single:main --- -->" | safeHTML -}}
+{{ end }}
+{{ end }}

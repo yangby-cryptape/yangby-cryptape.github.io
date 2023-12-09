@@ -1,0 +1,27 @@
+params:
+  debugMode: true
+  header:
+    menu:
+      - name: "Home"
+        tip: ":house:"
+        href: ""
+      - name: "Posts"
+        tip: ":writing_hand:"
+        href: "posts"
+      - name: "About"
+        tip: ":bearded_person:"
+        href: "about"
+  copyright:
+    name: "Chaotic Longhair"
+    email: "chaoticlonghair@gmail.com"
+    since: 2023
+    href:
+      contact: "about#contact"
+      credits: "about#credits"
+  license:
+    badges:
+      - name: "Creative Commons License"
+        src: "https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png"
+      - name: "GNU Affero General Public License"
+        src: "https://gnu.org/graphics/agplv3-88x31.png"
+    href: "about#license"
