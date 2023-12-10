@@ -31,6 +31,11 @@ params:
       #   - High CPU usage.
       #   - TODO Not support themes.
       useRemoteServer: true
+    asciinema:
+      enable: true
+      res:
+        css: "https://cdn.jsdelivr.net/npm/asciinema-player@3/dist/bundle/asciinema-player.min.css"
+        js: "https://cdn.jsdelivr.net/npm/asciinema-player@3/dist/bundle/asciinema-player.min.js"
   copyright:
     name: "Chaotic Longhair"
     email: "chaoticlonghair@gmail.com"

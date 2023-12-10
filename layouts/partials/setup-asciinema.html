@@ -1,0 +1,37 @@
+{{ if .Site.Params.DebugMode }}
+{{  "<!-- ^^^ partial:setup>mathjax ^^^ -->" | safeHTML -}}
+{{ end }}
+{{- $ext := .Site.Params.Extensions.Asciinema }}
+{{ if $ext.Enable -}}
+  {{ if .HasShortcode "asciinema" -}}
+    <link rel="stylesheet" type="text/css" href="{{ $ext.res.css }}" />
+    <script type="text/javascript" src="{{ $ext.res.js }}"></script>
+    <script type="text/javascript">
+      window.addEventListener("load", function () {
+        const filesRoot = "{{ "files" | relURL }}";
+        const defaultOpts = {
+          autoPlay: false, preload: false,
+          cols: 160, rows: 32, fit: "width",
+        };
+        const elements = document.getElementsByTagName("div")
+        const asciinemaElements = [];
+        for (var i = 0, length = elements.length; i < length; i++) {
+          if (elements[i].className.indexOf("hugo-asciinema-player") >= 0) {
+            let div = elements[i];
+            asciinemaElements.push(div);
+          }
+        }
+        for (var i = 0, length = asciinemaElements.length; i < length; i++) {
+          let div = asciinemaElements[i];
+          let userOptsStr = div.getAttribute("hugo-asciinema-player-options");
+          let userOpts = eval(`({${userOptsStr}})`);
+          let options = { ...defaultOpts, ...userOpts };
+          AsciinemaPlayer.create(`${filesRoot}/${div.id}.cast`, div, options);
+        }
+      })
+    </script>
+  {{ end }}
+{{- end }}
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- partial:setup>mathjax --- -->" | safeHTML -}}
+{{ end }}
