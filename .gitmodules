@@ -1,0 +1,4 @@
+[submodule "themes/default"]
+	path = themes/default
+	branch = theme
+	url = ./

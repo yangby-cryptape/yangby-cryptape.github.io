@@ -1,0 +1,10 @@
+languageCode: "en-us"
+title: "A Personal Static Site"
+theme: "default"
+enableRobotsTXT: true
+enableEmoji: true
+
+params:
+  copyright:
+    name: "Boyu Yang"
+    since: 2018

@@ -1,0 +1,10 @@
+#
+# Generate by `hugo` when build the site.
+#
+
+# Build lock.
+.hugo_build.lock
+# Contains the published website.
+/public/
+# Contains cached output.
+/resources/
