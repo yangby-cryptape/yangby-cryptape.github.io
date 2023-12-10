@@ -1,5 +1,9 @@
 {{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
 
+{{ define "head" }}
+  {{ partial "setup-mathjax" . }}
+{{ end }}
+
 {{ define "main" }}
 {{ if .Site.Params.DebugMode }}
 {{- "<!-- ^^^ default:single:main ^^^ -->" | safeHTML -}}

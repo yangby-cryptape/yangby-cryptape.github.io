@@ -1,0 +1,11 @@
+{{ if .Site.Params.DebugMode }}
+{{  "<!-- ^^^ partial:setup>mathjax ^^^ -->" | safeHTML -}}
+{{ end }}
+{{- $ext := .Site.Params.Extensions.Mathjax }}
+{{ if $ext.Enable -}}
+  <script>{{ $ext.res.cfg | safeJS }}</script>
+  <script type="text/javascript" id="MathJax-script" async src="{{ $ext.res.js }}"></script>
+{{- end }}
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- partial:setup>mathjax --- -->" | safeHTML -}}
+{{ end }}
