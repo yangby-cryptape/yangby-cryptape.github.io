@@ -1,9 +1,14 @@
 {{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
 
+{{ define "body-end" }}
+  {{ partial "render-navigation" . }}
+{{ end }}
+
 {{ define "main" }}
 {{ if .Site.Params.DebugMode }}
 {{- "<!-- ^^^ default:standalone:main ^^^ -->" | safeHTML -}}
 {{ end }}
+<nav><ul></ul></nav>
 <main class="clh-index">
   <h1 class="clh-title">{{ .Title }}</h1>
   <hr />

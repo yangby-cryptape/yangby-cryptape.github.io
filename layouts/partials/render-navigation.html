@@ -1,0 +1,24 @@
+{{ if .Site.Params.DebugMode }}
+{{  "<!-- ^^^ partial:body>nav ^^^ -->" | safeHTML -}}
+{{ end }}
+<script type="text/javascript">
+  window.addEventListener("load", function () {
+    const navbar = document.querySelector(".modernist-wrapper nav ul");
+    const elements = document.querySelectorAll(".clh-content h1, .clh-content h2, .clh-content h3, .clh-content h4, .clh-content h5, .clh-content h6");
+    for (var i = 0, length = elements.length; i < length; i++) {
+      let element = elements[i].cloneNode(true);
+      element.querySelectorAll('sup').forEach(function (x) {x.remove()});
+      let node = element.nodeName.toLocaleLowerCase();
+      let a = document.createElement("a");
+      a.setAttribute("href", `#${element.id}`)
+      a.innerHTML = element.innerHTML;
+      let li = document.createElement("li");
+      li.setAttribute("class", `tag-${node}`)
+      li.appendChild(a);
+      navbar.appendChild(li);
+    }
+  })
+</script>
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- partial:body>nav --- -->" | safeHTML -}}
+{{ end }}

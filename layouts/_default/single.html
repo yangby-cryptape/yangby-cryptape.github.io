@@ -1,6 +1,7 @@
 {{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
 
 {{ define "body-end" }}
+  {{ partial "render-navigation" . }}
   {{ partial "setup-mathjax" . }}
   {{ partial "setup-plantuml" . }}
   {{ partial "setup-asciinema" . }}
@@ -11,6 +12,7 @@
 {{- "<!-- ^^^ default:single:main ^^^ -->" | safeHTML -}}
 {{ end }}
 {{- $cr := .Site.Params.Copyright }}
+<nav><ul></ul></nav>
 <main>
   <article>
     <div class="clh-header">
