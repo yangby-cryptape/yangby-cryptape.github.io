@@ -5,6 +5,14 @@
 
 A [Hugo] theme for my static sites.
 
+## Credits
+
+The original theme created by [Steve Smith] and [GitHub Pages Themes] for [Jekyll].
+
+[Jekyll]: https://jekyllrb.com/ "Transform your plain text into static websites and blogs"
+[Steve Smith]: https://github.com/orderedlist/modernist
+[GitHub Pages Themes]: https://github.com/pages-themes/modernist
+
 ## License
 
 Except as otherwise noted,

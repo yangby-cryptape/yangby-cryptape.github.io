@@ -2,13 +2,15 @@
 {{ if .Site.Params.DebugMode }}
 {{- "<!-- ^^^ default:error/404:main ^^^ -->" | safeHTML -}}
 {{ end }}
-  <main id="main-404">
-    <h1 id="title">Page Not Found</h1><hr />
-    <div id="message">
-      <strong>Sorry, Page Not Found, :( </strong><br />
-      <a href="{{ "" | relURL }}">Go Back</a>
-    </div><br />
-  </main>
+<main class="clh-main-404">
+  <h1>Page Not Found</h1><hr />
+  <div class="clh-content">
+    <strong>Sorry, Page Not Found, :( </strong><br /><br />
+    <a href="{{ "" | relURL }}" class="clh-button">
+      {{ ":back:" | transform.Emojify }} Go Back
+    </a>
+  </div><br />
+</main>
 {{ if .Site.Params.DebugMode }}
 {{- "<!-- --- default:error/404:main --- -->" | safeHTML -}}
 {{ end }}

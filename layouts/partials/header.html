@@ -1,9 +1,17 @@
 {{ if .Site.Params.DebugMode }}
 {{  "<!-- ^^^ partial:body>header ^^^ -->" | safeHTML -}}
 {{ end }}
-{{- $items := .Site.Params.Header.Menu }}
-<header>
-  <ul id="menu">
+{{- $h := .Site.Params.Header }}
+{{- $items := $h.Menu }}
+<header {{ if $h.Description }}{{ else }} class="modernist-without-description" {{ end }}>
+  <h1>{{ .Site.Title }}</h1>
+  {{- if $h.Description }}<p>{{ $h.Description }}</p>{{ end }}
+  <p class="modernist-view">
+    {{ range $item := $items -}}
+      <a href="{{ $item.href | relURL }}">{{ transform.Emojify $item.tip }}{{ $item.name }}</a>
+    {{ end }}
+  </p>
+  <ul>
     {{ range $item := $items -}}
       <li><a href="{{ $item.href | relURL }}">{{ transform.Emojify $item.tip }}<strong>{{ $item.name }}</strong></a></li>
     {{ end }}

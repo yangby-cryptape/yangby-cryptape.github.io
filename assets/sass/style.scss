@@ -1,0 +1,127 @@
+@import "modified-jekyll-theme-modernist";
+
+//
+// Global
+//
+
+em {
+  font-style: italic;
+}
+
+footer {
+  .clh-license {
+    img {
+      border-width: 0;
+      max-width: 80%;
+    }
+  }
+  .clh-copyright {
+  }
+}
+
+//
+// Index Page
+//
+
+.clh-index {
+  .clh-title {
+    text-align: center;
+    font-size: 3.2rem;
+  }
+}
+
+//
+// List Page
+//
+
+.clh-list {
+  blockquote {
+    margin: 20px 0px 0px 0px;
+    padding: 5px 10px 5px 10px;
+    font-size: 1.3rem;
+  }
+}
+
+//
+// 404 Page
+//
+
+.clh-main-404 {
+  text-align: center;
+
+  .clh-content {
+    font-size: 1.8rem;
+  }
+
+  .clh-button {
+    background: linear-gradient(#77B9FB,#3782CD);
+    border: none;
+    color: #e7e7e7;
+    padding: 9px 18px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+  }
+}
+
+//
+// Article
+//
+
+article {
+  .clh-header {
+    font-weight: lighter;
+    small {
+      font-size: 1.2rem;
+    }
+    h1 {
+      font-size: 3.0rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+
+  .clh-content {
+    font-size: 1.5rem;
+    h1 {
+      font-size: 2.7rem;
+    }
+    h2 {
+      font-size: 2.5rem;
+    }
+    h3 {
+      font-size: 2.3rem;
+    }
+    h4 {
+      font-size: 2.1rem;
+    }
+    h5 {
+      font-size: 1.9rem;
+    }
+    h6 {
+      font-size: 1.7rem;
+    }
+    hr {
+      border: 0;
+      background: #aaa;
+      height: 1px;
+      margin: 0 0 20px;
+    }
+
+    .footnotes {
+      hr {
+        border: 3;
+        background: #222;
+        height: 1px;
+        margin: 60px 0 20px;
+      }
+    }
+  }
+
+  .clh-footer {
+    font-weight: lighter;
+    font-size: 1.2rem;
+    word-spacing: 0.2rem;
+  }
+}

@@ -4,14 +4,62 @@
 {{ if .Site.Params.DebugMode }}
 {{- "<!-- ^^^ default:single:main ^^^ -->" | safeHTML -}}
 {{ end }}
-  <main id="main-single">
-    <h1 id="title">{{ .Title }}</h1><hr />
-    <article id="content">
-      {{ with .Content -}}
-        {{ . }}
+{{- $cr := .Site.Params.Copyright }}
+<main>
+  <article>
+    <div class="clh-header">
+      <small>
+        &sect; Created:
+        <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
+          {{ .Date.Format "Monday, January 02, 2006" }}
+        </time>
+      </small>
+      <br />
+      <h1>{{ .Title }}</h1>
+      <p class="modernist-view">
+        &rArr; <i>Written by</i>
+        <a href="{{ $cr.site }}"><em>{{ $cr.name }}</em></a>
+        {{ if ne .Date .Lastmod }}
+          , <i>Last Modified on</i>
+          <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}">
+            {{ .Lastmod.Format "Mon, Jan 02, 2006" }}
+          </time>
+        {{ end }}
+      </p>
+    </div>
+    <div class="clh-content">
+      {{ with .Content }}{{ . }}{{ end }}
+    </div>
+    <hr />
+    <div class="clh-footer">
+      {{- $categories := .Site.Taxonomies.categories }}
+      {{ with .Params.categories -}}
+        Categories:
+        {{ range . }}
+          {{ $p := ($categories.Get . ).Page }}
+          <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+        {{ end }}
+        <br />
       {{- end }}
-    </article>
-  </main>
+      {{- $tags := .Site.Taxonomies.tags }}
+      {{ with .Params.tags -}}
+        Tags:
+        {{ range . }}
+          {{ $p := ($tags.Get . ).Page }}
+          <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+        {{ end }}
+        <br />
+      {{- end }}
+      {{- $series := .Site.Taxonomies.series }}
+      {{ with .Params.series -}}
+        Series:
+        {{ $p := ($series.Get . ).Page }}
+        <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+        <br />
+      {{- end }}
+    </div>
+  </article>
+</main>
 {{ if .Site.Params.DebugMode }}
 {{- "<!-- --- default:single:main --- -->" | safeHTML -}}
 {{ end }}

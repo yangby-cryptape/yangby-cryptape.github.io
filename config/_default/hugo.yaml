@@ -15,6 +15,7 @@ params:
     name: "Chaotic Longhair"
     email: "chaoticlonghair@gmail.com"
     since: 2023
+    site: "https://gravatar.com/chaoticlonghair"
     href:
       contact: "about#contact"
       credits: "about#credits"

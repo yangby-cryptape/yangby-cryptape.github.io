@@ -1,0 +1,71 @@
+{{ define "title" }}{{ .Title }} &ndash; {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- ^^^ default:section:main ^^^ -->" | safeHTML -}}
+{{ end }}
+<main class="clh-list">
+  <h1>{{ .Title }}</h1>
+  <section>{{ with .Content }}{{ . }}{{ end }}</section>
+  {{ range .Pages -}}
+    <ul>
+      <li>
+        <span>
+          <small>
+            &sect;
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">
+              {{ .Date.Format "Mon, Jan 02, 2006" }}
+            </time>
+          </small>
+        </span>
+        &raquo;
+        <a href="{{ .RelPermalink }}"><em>{{ .Title }}</em></a>
+      </li>
+      <blockquote class="clh-preview">
+        {{ .Summary | plainify | htmlUnescape | chomp }}
+        {{ if .Truncated }}
+          <a href="{{ .RelPermalink }}">Read More…</a>
+        {{ end }}
+      </blockquote>
+      <br />
+      <small>
+        {{ if ne .Date .Lastmod }}
+          Last Modified on
+          <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}">
+            {{ .Lastmod.Format "Mon, Jan 02, 2006" }}
+          </time>
+          .<br />
+        {{ end }}
+        About {{ .WordCount }} words. Estimated {{ .ReadingTime }} minutes for reading.<br />
+        {{- $categories := .Site.Taxonomies.categories }}
+        {{ with .Params.categories -}}
+          Categories:
+          {{ range . }}
+            {{ $p := ($categories.Get . ).Page }}
+            <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+          {{ end }}
+        {{- end }}
+        {{- $tags := .Site.Taxonomies.tags }}
+        {{ with .Params.tags -}}
+          Tags:
+          {{ range . }}
+            {{ $p := ($tags.Get . ).Page }}
+            <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+          {{ end }}
+        {{- end }}
+        {{- $series := .Site.Taxonomies.series }}
+        {{ with .Params.series -}}
+          Series:
+          {{ $p := ($series.Get . ).Page }}
+          <a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+        {{- end }}
+      </small>
+      <br />
+    </ul>
+  {{- end }}
+  <br />
+</main>
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- default:section:main --- -->" | safeHTML -}}
+{{ end }}
+{{ end }}

@@ -2,11 +2,13 @@
 {{  "<!-- ^^^ partial:body>footer#license ^^^ -->" | safeHTML -}}
 {{ end }}
 {{- $cr := .Site.Params.License }}
-<a id="license" href="{{ $cr.Href | relURL }}">
-  {{ range $b := $cr.Badges -}}
-    <img alt="{{ $b.name }}" src="{{ $b.src }}" />
-  {{ end }}
-</a>
+<p class="clh-license">
+  <a href="{{ $cr.Href | relURL }}">
+    {{ range $b := $cr.Badges -}}
+      <img alt="{{ $b.name }}" src="{{ $b.src }}" />
+    {{ end }}
+  </a>
+</p>
 {{ if .Site.Params.DebugMode }}
 {{- "<!-- --- partial:body>footer#license --- -->" | safeHTML -}}
 {{ end }}

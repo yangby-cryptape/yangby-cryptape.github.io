@@ -1,0 +1,11 @@
+{{ if .Site.Params.DebugMode }}
+{{  "<!-- ^^^ partial:head>static-basic^^^ -->" | safeHTML -}}
+{{ end }}
+{{- $opts := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
+{{ with resources.Get "sass/style.scss" | toCSS $opts | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{- end }}
+<script src="{{ "js/scale.fix.js" | relURL }}"></script>
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- ^^^ partial:head>static-basic^^^ -->" | safeHTML -}}
+{{ end }}
