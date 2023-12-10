@@ -1,6 +1,6 @@
 ---
-title: Home Page
+layout: default
 ---
+![Male Kodiak Bear Face]
 
-:wave: Hello, this page should be the home page. \
-:construction: But it's empty, because this site is still under construction.
+[Male Kodiak Bear Face]: https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Male_kodiak_bear_face.JPG/800px-Male_kodiak_bear_face.JPG

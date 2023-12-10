@@ -1,10 +1,35 @@
 languageCode: "en-us"
-title: "A Personal Static Site"
+title: "Fish Out Of Water"
 theme: "default"
 enableRobotsTXT: true
 enableEmoji: true
-
+taxonomies:
+  category: "categories"
+  tag: "tags"
+  # Each article should be only in at most one series.
+  series: "series"
+permalinks:
+  section:
+    posts: /posts/
+  page:
+    posts: /posts/:year/:month/:day/:slug/
 params:
+  debugMode: false
+  header:
+    description: "Bite Off More Than I Can Chew"
+    menu:
+      - name: "Home"
+        tip: ":house:"
+        href: ""
+      - name: "Posts"
+        tip: ":writing_hand:"
+        href: "posts"
+      - name: "Series"
+        tip: ":books:"
+        href: "series"
+      - name: "About"
+        tip: ":bearded_person:"
+        href: "about"
   copyright:
     name: "Boyu Yang"
     since: 2018
