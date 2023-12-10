@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+rootdir=$(cd "$(dirname "$0")"; pwd)
+
+function http_download() {
+    local src="${1}"
+    local dest="${rootdir}/${2}"
+    if [ -e "${dest}" ]; then
+        return
+    fi
+    wget -O "${dest}" "${src}"
+}
+
+function git_download() {
+    local repo="${1}"
+    local tag="${2}"
+    local res="${3}"
+    local dest="${rootdir}/${4}"
+    if [ -e "${dest}" ]; then
+        return
+    fi
+    local dest_parent_dir=$(dirname "${dest}")
+    local tmp="${dest}.tmp"
+    mkdir -p "${dest_parent_dir}"
+    git clone --branch "${tag}" -n --depth=1 --filter=tree:0 "${repo}" "${tmp}"
+    cd "${tmp}"
+    git sparse-checkout set --no-cone "${res}"
+    git checkout
+    mv "${res}" "${dest}"
+    rm -rf "${tmp}"
+}
+
+function main() {
+    http_download \
+        "https://raw.githubusercontent.com/johan/js-deflate/master/rawdeflate.js" \
+        "static/js/rawdeflate.js"
+    git_download \
+        "https://github.com/plantuml/plantuml.js" "v1.0.1" "plantuml-wasm" \
+        "static/vendor/plantuml.js"
+}
+
+main "$@"

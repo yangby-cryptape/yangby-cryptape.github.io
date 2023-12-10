@@ -9,7 +9,7 @@
     {{ partial "static-basic" . }}
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
-    {{ block   "head"   . }}{{ end }}
+    {{ block   "head-end" . }}{{ end }}
   </head>
   <body>
     <div class="modernist-wrapper">
@@ -17,6 +17,7 @@
       {{ block   "main"   . }}{{ end }}
     </div>
     {{ partial "footer" . }}
+    {{ block   "body-end" . }}{{ end }}
   </body>
 </html>
 {{ if .Site.Params.DebugMode }}

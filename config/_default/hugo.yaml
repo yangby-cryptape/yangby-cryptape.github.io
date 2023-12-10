@@ -21,6 +21,16 @@ params:
             tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
             svg: { fontCache: 'global' }
           };
+    plantuml:
+      enable: true
+      # - Remote Server: https://plantuml.com/code-javascript-asynchronous
+      # - JavaScript: https://github.com/plantuml/plantuml.js
+      #   Not recommended because:
+      #   - Too many files.
+      #   - Slow.
+      #   - High CPU usage.
+      #   - TODO Not support themes.
+      useRemoteServer: true
   copyright:
     name: "Chaotic Longhair"
     email: "chaoticlonghair@gmail.com"

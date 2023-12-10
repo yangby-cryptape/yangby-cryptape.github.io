@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+rootdir=$(cd "$(dirname "$0")"; pwd)
+
+function main() {
+    cd "${rootdir}"
+    rm -fv "static/js/rawdeflate.js"
+    rm -rfv "static/vendor"
+}
+
+main "$@"

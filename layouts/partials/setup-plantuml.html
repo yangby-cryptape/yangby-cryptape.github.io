@@ -1,0 +1,62 @@
+{{ if .Site.Params.DebugMode }}
+{{  "<!-- ^^^ partial:setup>plantuml ^^^ -->" | safeHTML -}}
+{{ end }}
+{{- $ext := .Site.Params.Extensions.Plantuml }}
+{{ if $ext.Enable -}}
+  {{ if eq (.Page.Store.Get "hasPlantUML") true -}}
+    {{ if $ext.useRemoteServer }}
+      <script src="{{ "js/rawdeflate.js" | relURL }}"></script>
+      <script src="{{ "js/setup-plantuml-remote-server.js" | relURL }}"></script>
+      <script type="text/javascript">
+        window.addEventListener("load", function () {
+          const elements = document.getElementsByTagName("pre");
+          const plantumlElements = [];
+          for (var i = 0, length = elements.length; i < length; i++) {
+            if (elements[i].className.indexOf('plantuml') >= 0) {
+              let pre = elements[i];
+              plantumlElements.push(pre);
+            }
+          }
+          for (var i = 0, length = plantumlElements.length; i < length; i++) {
+            let pre = plantumlElements[i];
+            let rawData = unescape(encodeURIComponent(pre.innerText));
+            let compressedData = deflate(rawData, 9);
+            let img = document.createElement("img");
+            img.src = "http://www.plantuml.com/plantuml/img/" + encode64(compressedData);
+            let br = document.createElement("br");
+            pre.replaceWith(img);
+            img.after(br);
+          }
+        })
+      </script>
+    {{ else }}
+      <script src="https://cjrtnc.leaningtech.com/2.3/loader.js"></script>
+      <script src="{{ "js/setup-plantuml-javascript.js" | relURL }}"></script>
+      <script type="text/javascript">
+        window.addEventListener("load", function () {
+          const cheerpjPath = "vendor/plantuml.js";
+          const plantumlPath = `../../../../../${cheerpjPath}`;
+          PLANTUML.initialize(cheerpjPath, plantumlPath).then(() => {
+            const elements = document.getElementsByTagName("pre")
+            for (var i = 0, length = elements.length; i < length; i++) {
+              if (elements[i].className.indexOf('plantuml') >= 0) {
+                let pre = elements[i];
+                let code = pre.innerText;
+                let img = document.createElement("img");
+                PLANTUML.renderPng(code).then((blob) => {
+                  img.src = window.URL.createObjectURL(blob)
+                  let br = document.createElement("br");
+                  pre.replaceWith(img);
+                  img.after(br);
+                });
+              }
+            }
+          })
+        })
+      </script>
+    {{ end }}
+  {{- end }}
+{{- end }}
+{{ if .Site.Params.DebugMode }}
+{{- "<!-- --- partial:setup>plantuml --- -->" | safeHTML -}}
+{{ end }}
